@@ -14,7 +14,9 @@ function App() {
         {languages.map((lang) => (
           <button
             key={lang.id}
-            className="btn btn-primary"
+            className={`btn ${
+              selectedLanguage.id === lang.id ? "btn-warning" : "btn-primary"
+            }`}
             onClick={() => setSelectedLanguage(lang)}
           >
             {lang.title}
